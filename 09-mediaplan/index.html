@@ -1,0 +1,169 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Mixed Media Plan — Nebula Patent Intelligence · Marketing Plan</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23b8410e'/%3E%3C/svg%3E"><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script><script defer src="/nebula-marketing-report/mermaid-init.js"></script><link rel="stylesheet" href="/nebula-marketing-report/assets/01-executive.DJDIKwPK.css"></head> <body> <header class="topnav"> <div class="topnav-inner"> <span class="brand">Nebula<span class="dot">.</span></span> <button class="nav-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.topnav nav').classList.toggle('open')">☰</button> <nav> <a href="/nebula-marketing-report/" class>Cover</a><a href="/nebula-marketing-report/01-executive" class>Summary</a><a href="/nebula-marketing-report/02-market" class>Market</a><a href="/nebula-marketing-report/03-icp" class>ICP</a><a href="/nebula-marketing-report/04-pain" class>Pain</a><a href="/nebula-marketing-report/05-theory" class>Theory</a><a href="/nebula-marketing-report/06-forecast" class>Forecast</a><a href="/nebula-marketing-report/07-channels" class>Channels</a><a href="/nebula-marketing-report/08-creative" class>Creative</a><a href="/nebula-marketing-report/09-mediaplan" class="active">Media Plan</a><a href="/nebula-marketing-report/10-nurture" class>Nurture</a><a href="/nebula-marketing-report/11-pipeline" class>Pipeline</a><a href="/nebula-marketing-report/12-cashflow" class>Cashflow</a><a href="/nebula-marketing-report/13-action" class>Action</a> </nav> </div> </header> <main class="page">  <p class="eyebrow">Chapter 09 · Mixed Media Plan</p> <h1>The whole<br><em style="color:var(--accent);font-weight:400">distribution stack.</em></h1> <p class="lede">
+The "ultimate" mixed media plan answers two questions at once:
+<strong>which channels do we use</strong>, and <strong>how does the
+    spend ramp month by month</strong>. Below is 12 months of allocation
+    across paid search, paid social, display, video, and live events —
+    sized to match the funnel volumes the forecast model predicts.
+</p> <div class="kpi-grid"> <div class="kpi"><div class="label">Year-1 paid budget</div><div class="value">$1920k</div><div class="delta">across 6 channels + events</div></div> <div class="kpi"><div class="label">Avg monthly spend</div><div class="value">$160k</div><div class="delta">starts $53k, ends $257k</div></div> <div class="kpi"><div class="label">Channels in flight</div><div class="value">6</div><div class="delta up">+ 4 owned channels</div></div> <div class="kpi"><div class="label">Demand ramp</div><div class="value">2.6×</div><div class="delta up">month-1 vs month-12</div></div> </div> <h2>Allocation by channel · monthly $thousands</h2> <figure class="chart"> <div class="chart-title">12-Month Channel Spend Curve</div> <div class="chart-sub">paid search ramps with conversion data; LinkedIn scales fastest; YouTube enters M3</div> <div style="position:relative;height:340px"> <canvas id="chart-af4756e7-17fa-4f37-98d1-e84b0b35dfc5"></canvas> </div> <div class="source">Source · CampaignForge plan · 2026-05-15</div> <script type="application/json" data-chart="chart-af4756e7-17fa-4f37-98d1-e84b0b35dfc5">{"id":"chart-af4756e7-17fa-4f37-98d1-e84b0b35dfc5","datasets":[{"label":"Google Search","data":[25,30,35,38,42,45,48,52,55,58,62,65],"borderColor":"#b8410e","backgroundColor":"rgba(184,65,14,0.15)"},{"label":"LinkedIn","data":[18,22,28,32,38,42,46,50,55,60,65,70],"borderColor":"#0a66c2","backgroundColor":"rgba(10,102,194,0.15)"},{"label":"Meta retarget","data":[10,14,18,22,26,30,34,38,42,46,50,54],"borderColor":"#1877f2","backgroundColor":"rgba(24,119,242,0.15)"},{"label":"YouTube","data":[0,0,8,12,16,20,24,28,32,36,40,44],"borderColor":"#ff0000","backgroundColor":"rgba(255,0,0,0.12)"},{"label":"Display","data":[0,3,5,7,9,12,14,16,18,20,22,24],"borderColor":"#9a8a76","backgroundColor":"rgba(154,138,118,0.15)"},{"label":"Events","data":[0,0,0,15,0,0,15,0,0,15,0,0],"borderColor":"#f0c97e","backgroundColor":"rgba(240,201,126,0.18)"}],"labels":["M1","M2","M3","M4","M5","M6","M7","M8","M9","M10","M11","M12"],"height":340}</script> </figure> <script>
+(function(){
+  function readVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    Chart.defaults.font.family = "'Inter', sans-serif";
+    Chart.defaults.color = readVar('--ink-soft');
+    Chart.defaults.borderColor = readVar('--rule');
+    document.querySelectorAll('script[data-chart]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          borderColor: col,
+          backgroundColor: d.fill ? col + '22' : 'transparent',
+          tension: 0.32,
+          borderWidth: 2.2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          fill: d.fill || false,
+        }, d, { color: undefined });
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'line',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+              titleFont: { family: "'Playfair Display', serif", size: 14 },
+              bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
+            }
+          },
+          scales: {
+            x: { grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 }, maxRotation: 0 } },
+            y: { grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: false }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <h2>Why this shape</h2> <table class="data"> <thead><tr><th>Channel</th><th>When it enters</th><th>Why</th><th>Year-1 total</th></tr></thead> <tbody> <tr><td><strong>Google Search</strong></td><td>M1, immediately</td><td>Highest intent. We need conversions in W1 to feed Smart Bidding the data it needs to optimize.</td><td>$555k</td></tr> <tr><td><strong>LinkedIn</strong></td><td>M1, account-targeted</td><td>The Tier-1 + Tier-2 ICP is on LinkedIn. We start with 600 named accounts and expand monthly.</td><td>$526k</td></tr> <tr><td><strong>Meta retargeting</strong></td><td>M1, retarget only</td><td>Cheap reminder between LinkedIn touches. No prospecting; site-visitor + lookalike-of-customers only.</td><td>$384k</td></tr> <tr><td><strong>YouTube</strong></td><td>M3 — once case-study video is filmed</td><td>Top-funnel awareness for the WSOU narrative. Custom-affinity audiences only.</td><td>$260k</td></tr> <tr><td><strong>Display</strong></td><td>M2 — once retargeting pixel has data</td><td>$4–$8 CPM memory aid between LinkedIn touches. Retarget only.</td><td>$150k</td></tr> <tr><td><strong>Live events</strong></td><td>M4, M7, M10 — IPBC, AIPLA, IAM Patent Litigation</td><td>The single highest-converting channel for our ICP. $15k budget covers booth + dinner.</td><td>$45k</td></tr> </tbody> </table> <h2>Display, YouTube, TikTok — the viability call</h2> <table class="data"> <thead><tr><th>Channel</th><th>Verdict</th><th>Use case</th><th>Disqualifier</th></tr></thead> <tbody> <tr><td><strong>Display (GDN)</strong></td><td><span class="tag-positive">Viable — retarget only</span></td><td>$4–$8 CPM reminder; reinforces LinkedIn touches</td><td>Cold prospecting CTR &lt;0.15%; can't filter to job title</td></tr> <tr><td><strong>YouTube</strong></td><td><span class="tag-positive">Viable — narrow targeting</span></td><td>Case-study video + custom-affinity from law-firm domains</td><td>Requires high-quality 60–150s asset (M3 minimum)</td></tr> <tr><td><strong>TikTok</strong></td><td><span class="tag-negative">Not viable — Year 1</span></td><td>None for our ICP</td><td>Audience demographic mismatch; LawTok = consumer-lawyer content</td></tr> <tr><td><strong>Reddit</strong></td><td><span class="tag-positive">Pilot only ($2k/mo M6+)</span></td><td>r/patentlaw, r/Lawyertalk — small but engaged</td><td>Subreddits don't permit overt selling; sponsored posts only</td></tr> <tr><td><strong>Podcast (IP Watchdog, Patently Strategic)</strong></td><td><span class="tag-positive">Viable from M5</span></td><td>$3k–$8k host-read sponsorships</td><td>Lead times 4–6 weeks; hard to attribute</td></tr> <tr><td><strong>Print (Managing IP, IAM)</strong></td><td><span class="tag-negative">Skip</span></td><td>None</td><td>$8k full-page; CPM 10× LinkedIn for same audience</td></tr> </tbody> </table> <h2>Owned channels — free distribution we ship alongside paid</h2> <table class="data"> <thead><tr><th>Channel</th><th>Cadence</th><th>Lever</th></tr></thead> <tbody> <tr><td><strong>Email newsletter</strong></td><td>Bi-weekly</td><td>Curated &ldquo;3 invalidity references that closed cases this month&rdquo;</td></tr> <tr><td><strong>Founder LinkedIn posts</strong></td><td>3×/week</td><td>WSOU narrative deep-dives, NPE acquisition tracking, FRAND benchmark data</td></tr> <tr><td><strong>SEO / blog</strong></td><td>2 posts/week</td><td>&ldquo;How to invalidate a 5G SEP claim&rdquo; long-form playbooks, capturing org search</td></tr> <tr><td><strong>Product-led signup</strong></td><td>Always-on</td><td>Free single-claim search + emailed PDF report — viral in IP teams</td></tr> </tbody> </table> <h2>Cumulative spend curve</h2> <figure class="chart"> <div class="chart-title">Cumulative Paid Spend, $thousands</div> <div class="chart-sub">from $81k spent month-1 to ~$781k cumulative by month-12</div> <div style="position:relative;height:280px"> <canvas id="chart-132fba2a-5f14-4586-a2c5-48eaf3a5a45d"></canvas> </div> <div class="source">Source · Allocation table above</div> <script type="application/json" data-chart="chart-132fba2a-5f14-4586-a2c5-48eaf3a5a45d">{"id":"chart-132fba2a-5f14-4586-a2c5-48eaf3a5a45d","datasets":[{"label":"Cumulative spend","data":[53,122,216,342,473,622,803,987,1189,1424,1663,1920],"borderColor":"#b8410e","backgroundColor":"rgba(184,65,14,0.18)"}],"labels":["M1","M2","M3","M4","M5","M6","M7","M8","M9","M10","M11","M12"],"height":280}</script> </figure> <script>
+(function(){
+  function readVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    Chart.defaults.font.family = "'Inter', sans-serif";
+    Chart.defaults.color = readVar('--ink-soft');
+    Chart.defaults.borderColor = readVar('--rule');
+    document.querySelectorAll('script[data-chart]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          borderColor: col,
+          backgroundColor: d.fill ? col + '22' : 'transparent',
+          tension: 0.32,
+          borderWidth: 2.2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          fill: d.fill || false,
+        }, d, { color: undefined });
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'line',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+              titleFont: { family: "'Playfair Display', serif", size: 14 },
+              bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
+            }
+          },
+          scales: {
+            x: { grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 }, maxRotation: 0 } },
+            y: { grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: false }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <h2>Proportional allocation, year-1 totals</h2> <figure class="chart"> <div class="chart-title">Year-1 channel mix · % of paid budget</div> <div class="chart-sub">total = $1920k</div> <div style="position:relative;height:260px"> <canvas id="bar-df59e272-e734-44b2-a983-b96e53740593"></canvas> </div> <div class="source">Source · Allocation table</div> <script type="application/json" data-bar="bar-df59e272-e734-44b2-a983-b96e53740593">{"id":"bar-df59e272-e734-44b2-a983-b96e53740593","datasets":[{"label":"%","data":[29,27,20,14,8,2],"backgroundColor":"rgba(184,65,14,0.7)"}],"labels":["Google","LinkedIn","Meta","YouTube","Display","Events"],"height":260,"horizontal":false,"stacked":false}</script> </figure> <script>
+(function(){
+  function readVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    document.querySelectorAll('script[data-bar]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          backgroundColor: col,
+          borderRadius: 2,
+          borderSkipped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.7,
+        }, d);
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'bar',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          indexAxis: cfg.horizontal ? 'y' : 'x',
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+            }
+          },
+          scales: {
+            x: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } } },
+            y: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: true }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <nav class="page-nav"> <a href="/nebula-marketing-report/08-creative"> <span class="step">← Chapter 08</span> Creative </a> <a href="/nebula-marketing-report/10-nurture" style="text-align:right"> <span class="step">Chapter 10 →</span> Nurture </a> </nav>  </main> </body></html>
