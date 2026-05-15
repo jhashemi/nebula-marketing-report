@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Channel Strategy — Nebula Patent Intelligence · Marketing Plan</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23b8410e'/%3E%3C/svg%3E"><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script><link rel="stylesheet" href="/assets/01-executive.CgqDR4fN.css"></head> <body> <header class="topnav"> <div class="topnav-inner"> <span class="brand">Nebula<span class="dot">.</span></span> <nav> <a href="/" class>Cover</a><a href="/01-executive" class>Executive Summary</a><a href="/02-market" class>Market</a><a href="/03-theory" class>Theory of the Case</a><a href="/04-forecast" class>Forecast</a><a href="/05-channels" class="active">Channel Strategy</a><a href="/06-pipeline" class>Pipeline</a><a href="/07-cta" class>Action</a> </nav> </div> </header> <main class="page">  <p class="eyebrow">Chapter 05 · Channel Strategy</p> <h1>Three channels.<br><em style="color:var(--accent);font-weight:400">Three jobs.</em></h1> <p class="lede">
+Google catches the searcher. LinkedIn reaches the buyer. Meta — the surprise —
+    catches the in-house counsel scrolling at 9pm. Each gets a different creative,
+    a different funnel, a different KPI.
+</p> <h2>Allocation, $290k</h2> <figure class="chart"> <div class="chart-title">Budget Split — Conservative Tier</div> <div class="chart-sub">$203k deployed, $87k held in reserve for D15–30 retargeting</div> <div style="position:relative;height:240px"> <canvas id="bar-6e469fb8-5158-49f8-b882-8e8e86f70391"></canvas> </div> <div class="source">Source · CampaignForge SMT optimizer · Z3 + Simplex</div> <script type="application/json" data-bar="bar-6e469fb8-5158-49f8-b882-8e8e86f70391">{"id":"bar-6e469fb8-5158-49f8-b882-8e8e86f70391","datasets":[{"label":"Spend ($)","data":[67667,67667,67667,87000],"color":["var(--c1)","var(--c2)","var(--c3)","var(--c5)"]}],"labels":["Google","LinkedIn","Meta","Reserve"],"height":240,"horizontal":true,"stacked":false}</script> </figure> <script>
+(function(){
+  function readVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    document.querySelectorAll('script[data-bar]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          backgroundColor: col,
+          borderRadius: 2,
+          borderSkipped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.7,
+        }, d);
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'bar',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          indexAxis: cfg.horizontal ? 'y' : 'x',
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+            }
+          },
+          scales: {
+            x: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } } },
+            y: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: true }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <h2>Channel × Creative matrix</h2> <table> <thead> <tr> <th>Channel</th> <th>Job</th> <th>Primary Angle</th> <th>Framework</th> <th class="num">Forecast CPA</th> </tr> </thead> <tbody> <tr> <td><strong>Google Ads</strong></td> <td>Capture intent — "patent claim chart cost"</td> <td>Curiosity</td> <td>BAB (Before / After / Bridge)</td> <td class="num">$54.92</td> </tr> <tr> <td><strong>LinkedIn</strong></td> <td>Reach IP partners + GCs at top-1500 firms</td> <td>Aspiration</td> <td>AIDA</td> <td class="num">$88.92</td> </tr> <tr> <td><strong>Meta</strong></td> <td>Retarget warm visitors + lookalike of trial users</td> <td>Fear</td> <td>PAS (Problem / Agitate / Solve)</td> <td class="num">$48.52</td> </tr> </tbody> </table> <figure class="chart"> <div class="chart-title">Creative-angle multipliers — CTR vs Conversion</div> <div class="chart-sub">modifiers applied on top of channel baselines</div> <div style="position:relative;height:260px"> <canvas id="bar-29b87439-84fa-4d08-bdb4-06c16b3baea9"></canvas> </div> <div class="source">Source · CampaignForge ICP voice + creative-angles bridge</div> <script type="application/json" data-bar="bar-29b87439-84fa-4d08-bdb4-06c16b3baea9">{"id":"bar-29b87439-84fa-4d08-bdb4-06c16b3baea9","datasets":[{"label":"CTR multiplier","data":[1.1,1,1.15]},{"label":"Conv multiplier","data":[0.95,1.1,1]}],"labels":["Fear (PAS)","Aspiration (AIDA)","Curiosity (BAB)"],"height":260,"horizontal":false,"stacked":false}</script> </figure> <script>
+(function(){
+  function readVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    document.querySelectorAll('script[data-bar]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          backgroundColor: col,
+          borderRadius: 2,
+          borderSkipped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.7,
+        }, d);
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'bar',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          indexAxis: cfg.horizontal ? 'y' : 'x',
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+            }
+          },
+          scales: {
+            x: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } } },
+            y: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: true }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <h2>Copy that ships, day one</h2> <h3>Google — Search · Curiosity · BAB</h3> <pre><code>Headline 1: Patent Claim Chart in 24 Hours
+Headline 2: From $220k Manual to $3,500 AI
+Headline 3: Citation-Traced. Standards-Aligned.
+Description 1: Stop filing first and reading later. Nebula maps every claim
+  to the live 3GPP / IEEE corpus, with a confidence score and full citation
+  chain — in one business day.
+Description 2: Built for IP litigators, NPEs, and litigation funders.
+  Try one report free.
+CTA: Free Report →</code></pre> <h3>LinkedIn — Sponsored Content · Aspiration · AIDA</h3> <pre><code>Hook (line 1): WSOU filed 205 patent suits. Recovered $0.
+Body: Their problem isn&#39;t the patents — it&#39;s that nobody read them
+  against the standard before filing. We do.
+
+Nebula Patent Intelligence reads the SEP corpus the way your most
+  rigorous associate would, in 24 hours, with citation traceback.
+
+The next 7 cases your firm wins will be the ones it filed knowing
+  the answer. Read first. File second. Win more often.
+CTA: Run a free claim chart →</code></pre> <h3>Meta — Retargeting Reels · Fear · PAS</h3> <pre><code>Visual: split-screen, left = $220k legal invoice, right = a 24h Nebula report
+Voiceover (15s):
+  &quot;If you knew the patent didn&#39;t read on the standard,
+   would you still have filed the case?
+   We tell you in 24 hours. For three thousand five hundred dollars.
+   Or you can keep paying two-twenty for the same answer in nine weeks.&quot;
+CTA: See a sample report →</code></pre> <h2>Funnel architecture</h2> <div class="mermaid-wrap"> <div class="mermaid">flowchart LR
+  subgraph Awareness
+    G[Google Search&lt;br/&gt;&#39;patent claim chart&#39;]
+    L[LinkedIn Sponsored&lt;br/&gt;IP partners @ AmLaw 200]
+    M[Meta Reels&lt;br/&gt;warm + lookalike]
+  end
+  subgraph Consideration
+    LP[Landing page&lt;br/&gt;WSOU stat above the fold]
+    SR[Sample Report&lt;br/&gt;downloadable PDF]
+  end
+  subgraph Conversion
+    F[Free Report&lt;br/&gt;upload one patent]
+    T[Trial&lt;br/&gt;5-report bundle]
+    C[Contract&lt;br/&gt;annual seat]
+  end
+  G --&gt; LP
+  L --&gt; LP
+  M --&gt; LP
+  LP --&gt; SR
+  SR --&gt; F
+  F --&gt; T
+  T --&gt; C
+  style F fill:#b8410e22,stroke:#b8410e
+  style T fill:#2d6e6b22,stroke:#2d6e6b
+  style C fill:#4a5d3a22,stroke:#4a5d3a
+</div> </div> <h2>The cold-email play (D8 onward)</h2> <pre><code>Subject: 24-hour claim chart — your &lt;Patent #&gt; against TS 38.331
+
+Hi {{firstName}},
+
+I noticed {{firm}} just filed in {{venue}}. We built a system that
+maps a patent family to the 3GPP / IEEE / ETSI standards corpus and
+returns a defensible claim chart in 24 hours, citation-traced, for
+$3,500.
+
+If it would help to see what one of your asserted patents looks like
+against the live standard before the next filing, I can run it on us.
+
+Reply with the patent number and I&#39;ll have a chart back tomorrow.
+
+— {{senderName}}, Nebula Patent Intelligence</code></pre> <p>
+Cold-email volume targets the AmLaw-200 IP partner list and the published
+    WSOU + Acacia + Sisvel + InterDigital docket counsel, deduped against an
+    inferred role list (partner / counsel / IP litigator). Send caps at 60/day
+    per inbox to stay within deliverability norms; expected reply rate
+    1.8–2.4% off a warm-cold list.
+</p> <nav class="page-nav"> <a href="/04-forecast"> <span class="step">← Chapter 04</span> Forecast &amp; Unit Economics </a> <a href="/06-pipeline" style="text-align:right"> <span class="step">Chapter 06 →</span> Pricing &amp; Pipeline </a> </nav>  </main> <script type="module">
+    if (window.mermaid) {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      window.mermaid.initialize({
+        startOnLoad: true,
+        theme: isDark ? 'dark' : 'default',
+        themeVariables: {
+          fontFamily: 'Inter, sans-serif',
+          primaryColor: isDark ? '#1a1410' : '#f5efe3',
+          primaryTextColor: isDark ? '#f0e6d2' : '#1a1612',
+          primaryBorderColor: isDark ? '#3a2f23' : '#c9bea7',
+          lineColor: isDark ? '#95876e' : '#6b5d4d',
+          mainBkg: isDark ? '#1a1410' : '#f5efe3',
+        },
+      });
+    }
+  </script> </body> </html>

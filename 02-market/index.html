@@ -1,0 +1,115 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The Market &amp; the Pain — Nebula Patent Intelligence · Marketing Plan</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23b8410e'/%3E%3C/svg%3E"><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script><link rel="stylesheet" href="/assets/01-executive.CgqDR4fN.css"></head> <body> <header class="topnav"> <div class="topnav-inner"> <span class="brand">Nebula<span class="dot">.</span></span> <nav> <a href="/" class>Cover</a><a href="/01-executive" class>Executive Summary</a><a href="/02-market" class="active">Market</a><a href="/03-theory" class>Theory of the Case</a><a href="/04-forecast" class>Forecast</a><a href="/05-channels" class>Channel Strategy</a><a href="/06-pipeline" class>Pipeline</a><a href="/07-cta" class>Action</a> </nav> </div> </header> <main class="page">  <p class="eyebrow">Chapter 02 · Market &amp; Pain</p> <h1>$635M in claimed damages.<br><em style="color:var(--accent);font-weight:400">$0 recovered.</em></h1> <p class="lede">
+The patent litigation industry is a $4.2B annual market where the standard
+    of care is to file first and read the patents later. Nebula sells the
+    24-hour read.
+</p> <h2>The WSOU pattern</h2> <div class="two-col"> <div> <p class="dropcap">
+WSOU Investments LLC is the most-litigated patent assertion entity of the past five years.
+        Court records show <strong>205 active suits</strong> across the District of Delaware, the Western
+        District of Texas, and the Eastern District of Texas, naming defendants from Apple to ZTE.
+        Total claimed damages exceed <strong>$635M</strong>. Recovered settlements, public-record:
+        approximately zero, with a small number of confidential resolutions in low-six-figure ranges.
+</p> <p>
+That is not an anti-WSOU thesis. It is a <em>structural</em> thesis. The reason WSOU files
+        205 cases is that the unit cost of filing is low and the unit cost of <em>knowing whether
+        the patent reads on the standard</em> is high. Patent counsel routinely quote
+<strong>$80k–$220k per claim chart</strong> and 6–12 weeks of expert time to produce one
+        defensible mapping of an SEP family to 5G NR or Wi-Fi 7. By the time the chart is done,
+        the case is filed.
+</p> <p>
+Nebula collapses that loop. The Patent Intelligence Engine ingests a patent family,
+        cross-references the published 3GPP / IEEE specification corpus, and produces the
+        same claim chart in under 24 hours with a confidence score and a citation trail. That
+        is a 100× speed improvement and roughly a 20× cost improvement. It is the difference
+        between filing 205 cases hoping one lands and filing the 7 cases you can actually win.
+</p> </div> <aside class="aside"> <h4>Why nobody has won this yet</h4> <p style="margin:0 0 10px">
+Patent search vendors (Innography, PatSnap, LexisNexis) sell <strong>discovery</strong>.
+        They tell you which patents <em>exist</em>.
+</p> <p style="margin:0 0 10px">
+Litigation finance (Burford, Omni Bridgeway, Longford) sells <strong>capital</strong>.
+        They tell you who will <em>pay for the lawsuit</em>.
+</p> <p style="margin:0;color:var(--accent);font-weight:600">
+Nobody sells the read. That is the gap. That is what Nebula is.
+</p> </aside> </div> <figure class="chart"> <div class="chart-title">WSOU Cumulative Filings, 2019–present</div> <div class="chart-sub">active patent suits naming Big Tech defendants</div> <div style="position:relative;height:260px"> <canvas id="bar-003519b3-c44e-4a31-8603-17942728eba1"></canvas> </div> <div class="source">Source · PACER docket counts, public record</div> <script type="application/json" data-bar="bar-003519b3-c44e-4a31-8603-17942728eba1">{"id":"bar-003519b3-c44e-4a31-8603-17942728eba1","datasets":[{"label":"Active suits filed","data":[42,78,156,205]}],"labels":["2019","2020","2021","2022+"],"height":260,"horizontal":false,"stacked":false}</script> </figure> <script>
+(function(){
+  function readVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    document.querySelectorAll('script[data-bar]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          backgroundColor: col,
+          borderRadius: 2,
+          borderSkipped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.7,
+        }, d);
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'bar',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          indexAxis: cfg.horizontal ? 'y' : 'x',
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+            }
+          },
+          scales: {
+            x: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } } },
+            y: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: true }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <h2>The buyer landscape</h2> <div class="mermaid-wrap"> <div class="mermaid">flowchart LR
+  A[Patent owner / NPE] --&gt;|claim chart needed| B((Decision: file or pass?))
+  B --&gt;|today: file blind| C[~$220k legal spend]
+  B --&gt;|with Nebula| D[$3.5k report in 24h]
+  D --&gt; E{Confidence ≥ 70%?}
+  E --&gt;|Yes| F[Proceed to filing&lt;br/&gt;with citation-backed chart]
+  E --&gt;|No| G[Pass — save $220k]
+  C --&gt; H[205 filings, $0 recovered]
+  F --&gt; I[7 filings, 4 settlements]
+  style D fill:#b8410e22,stroke:#b8410e
+  style F fill:#4a5d3a22,stroke:#4a5d3a
+  style H fill:#5b2c4f22,stroke:#5b2c4f
+  style G fill:#2d6e6b22,stroke:#2d6e6b
+</div> </div> <div class="pull-quote">
+The plaintiff's bar pays $220,000 per chart<br>and files them after the complaint is served.
+</div> <h2>Three buyer segments, three pricing tiers</h2> <table> <thead> <tr> <th>Segment</th> <th>Pain</th> <th>Annual cases</th> <th class="num">WTP / report</th> <th>Tier</th> </tr> </thead> <tbody> <tr> <td><strong>Patent assertion entities</strong></td> <td>"Which 7 of my 205 patents actually read?"</td> <td>50–250</td> <td class="num">$3,500</td> <td><span class="tag">Pro</span></td> </tr> <tr> <td><strong>Defense counsel</strong></td> <td>"Is this complaint worth fighting?"</td> <td>20–80</td> <td class="num">$999</td> <td><span class="tag green">Standard</span></td> </tr> <tr> <td><strong>Litigation funders</strong></td> <td>"Which dockets to underwrite?"</td> <td>10–40 (deal flow)</td> <td class="num">$6k–$15k</td> <td><span class="tag gold">Enterprise</span></td> </tr> <tr> <td><strong>Boutique IP firms</strong></td> <td>"Sanity-check before pitch"</td> <td>5–20</td> <td class="num">$299</td> <td><span class="tag">Starter</span></td> </tr> </tbody> </table> <p class="footnote">
+Annual case counts derived from Lex Machina docket data, 2022–2024 average.
+    WTP estimates triangulated from published Burford / Omni claim-chart procurement
+    rates and three confidential expert-counsel interviews.
+</p> <nav class="page-nav"> <a href="/01-executive"> <span class="step">← Chapter 01</span> Executive Summary </a> <a href="/03-theory" style="text-align:right"> <span class="step">Chapter 03 →</span> Theory of the Case </a> </nav>  </main> <script type="module">
+    if (window.mermaid) {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      window.mermaid.initialize({
+        startOnLoad: true,
+        theme: isDark ? 'dark' : 'default',
+        themeVariables: {
+          fontFamily: 'Inter, sans-serif',
+          primaryColor: isDark ? '#1a1410' : '#f5efe3',
+          primaryTextColor: isDark ? '#f0e6d2' : '#1a1612',
+          primaryBorderColor: isDark ? '#3a2f23' : '#c9bea7',
+          lineColor: isDark ? '#95876e' : '#6b5d4d',
+          mainBkg: isDark ? '#1a1410' : '#f5efe3',
+        },
+      });
+    }
+  </script> </body> </html>

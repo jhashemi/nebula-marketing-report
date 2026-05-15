@@ -1,0 +1,148 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Pricing &amp; Pipeline — Nebula Patent Intelligence · Marketing Plan</title><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='40' fill='%23b8410e'/%3E%3C/svg%3E"><script defer src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/mermaid@10.9.0/dist/mermaid.min.js"></script><link rel="stylesheet" href="/assets/01-executive.CgqDR4fN.css"></head> <body> <header class="topnav"> <div class="topnav-inner"> <span class="brand">Nebula<span class="dot">.</span></span> <nav> <a href="/" class>Cover</a><a href="/01-executive" class>Executive Summary</a><a href="/02-market" class>Market</a><a href="/03-theory" class>Theory of the Case</a><a href="/04-forecast" class>Forecast</a><a href="/05-channels" class>Channel Strategy</a><a href="/06-pipeline" class="active">Pipeline</a><a href="/07-cta" class>Action</a> </nav> </div> </header> <main class="page">  <p class="eyebrow">Chapter 06 · Pricing &amp; Pipeline</p> <h1>Four prices,<br><em style="color:var(--accent);font-weight:400">one engine.</em></h1> <p class="lede">
+Same model, four packages. The cost-to-serve is identical at the margin —
+    we charge for decision-weight, not compute.
+</p> <h2>Pricing card</h2> <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr))"> <div class="kpi" style="display:flex;flex-direction:column;gap:10px"> <div class="label" style="color:var(--accent)">Starter</div> <div class="value">$299<span style="font-size:0.5em;color:var(--muted);font-family:var(--mono);font-weight:400;letter-spacing:0.06em"> / report</span></div> <div style="font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 6px">Boutique IP firms, sanity-checks</div> <ul style="margin:0;padding-left:1.1em;font-size:13.5px;line-height:1.5"> <li>1 patent family</li><li>Standards crosswalk</li><li>Confidence score</li><li>PDF claim chart</li> </ul> </div><div class="kpi" style="display:flex;flex-direction:column;gap:10px"> <div class="label" style="color:var(--accent)">Standard</div> <div class="value">$999<span style="font-size:0.5em;color:var(--muted);font-family:var(--mono);font-weight:400;letter-spacing:0.06em"> / report</span></div> <div style="font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 6px">Defense counsel, single-case scoping</div> <ul style="margin:0;padding-left:1.1em;font-size:13.5px;line-height:1.5"> <li>1 family + 5 prior-art</li><li>Markman-prep memo</li><li>Citation chain export</li><li>Slack support</li> </ul> </div><div class="kpi" style="display:flex;flex-direction:column;gap:10px"> <div class="label" style="color:var(--accent)">Pro</div> <div class="value">$3,500<span style="font-size:0.5em;color:var(--muted);font-family:var(--mono);font-weight:400;letter-spacing:0.06em"> / report</span></div> <div style="font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 6px">NPEs, plaintiff firms, decision-grade</div> <ul style="margin:0;padding-left:1.1em;font-size:13.5px;line-height:1.5"> <li>Full family tree</li><li>Litigation-outcome model</li><li>Damages comparable corpus</li><li>Expert-counsel review</li> </ul> </div><div class="kpi" style="display:flex;flex-direction:column;gap:10px"> <div class="label" style="color:var(--accent)">Enterprise</div> <div class="value">$9,500<span style="font-size:0.5em;color:var(--muted);font-family:var(--mono);font-weight:400;letter-spacing:0.06em"> / month</span></div> <div style="font-size:13px;color:var(--muted);font-style:italic;margin:-4px 0 6px">Litigation funders, in-house IP</div> <ul style="margin:0;padding-left:1.1em;font-size:13.5px;line-height:1.5"> <li>Unlimited reports</li><li>Portfolio audit (quarterly)</li><li>API access</li><li>Named CSM + outcome SLA</li> </ul> </div> </div> <p>
+The price ladder is deliberately steep. The $299 Starter is a try-it-before-you-trust-it
+    SKU; we expect 45% of total report volume here, generating roughly 9% of revenue. The Pro
+    tier at $3,500 is the gravity well — it is priced against the manual claim-chart procurement
+    benchmark of $80k–$220k and represents 20% of volume but 49% of revenue. Enterprise at
+    $9,500/month is the exit-the-procurement-loop SKU for the four largest litigation funders;
+    we expect 5–10 of these by end of year one.
+</p> <h2>Funnel — 30 days, conservative tier</h2> <figure class="chart"> <div class="chart-title">Stage-to-Stage Conversion</div> <div class="chart-sub">paid impressions through signed contracts · 30-day pilot window</div> <div style="position:relative;height:280px"> <canvas id="bar-3f2f31b6-7bc7-4ce5-a886-c6ea529a6ac3"></canvas> </div> <div class="source">Source · CampaignForge forecast + assumed downstream rates</div> <script type="application/json" data-bar="bar-3f2f31b6-7bc7-4ce5-a886-c6ea529a6ac3">{"id":"bar-3f2f31b6-7bc7-4ce5-a886-c6ea529a6ac3","datasets":[{"label":"Volume","data":[3120000,45900,24800,3388,780,94]}],"labels":["Impressions","Clicks","Visitors","Free Reports","Trials","Contracts"],"height":280,"horizontal":true,"stacked":false}</script> </figure> <script>
+(function(){
+  function readVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    document.querySelectorAll('script[data-bar]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          backgroundColor: col,
+          borderRadius: 2,
+          borderSkipped: false,
+          barPercentage: 0.85,
+          categoryPercentage: 0.7,
+        }, d);
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'bar',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          indexAxis: cfg.horizontal ? 'y' : 'x',
+          responsive: true, maintainAspectRatio: false,
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+            }
+          },
+          scales: {
+            x: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } } },
+            y: { stacked: cfg.stacked, grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: true }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <table> <thead> <tr> <th>Stage</th> <th class="num">Volume</th> <th class="num">% of Top</th> <th>Driver</th> </tr> </thead> <tbody> <tr><td>Impressions</td><td class="num">3.12M</td><td class="num">100%</td><td>$203k spend across 3 channels</td></tr> <tr><td>Clicks</td><td class="num">45.9k</td><td class="num">1.47%</td><td>blended CTR ≈ 1.47%</td></tr> <tr><td>Visitors (unique)</td><td class="num">24.8k</td><td class="num">0.79%</td><td>after bot filter, dedup</td></tr> <tr><td>Free reports</td><td class="num">3,388</td><td class="num">0.11%</td><td>SMT optimizer's 80.6%-conf forecast</td></tr> <tr><td>Trials (5-report)</td><td class="num">780</td><td class="num">0.03%</td><td>23% free→trial historical at this ARPA</td></tr> <tr><td><strong>Contracts</strong></td><td class="num"><strong>94</strong></td><td class="num"><strong>0%</strong></td><td>12% trial→contract, mostly Standard + Pro</td></tr> </tbody> </table><strong> <h2>12-month revenue ramp</h2> <figure class="chart"> <div class="chart-title">MRR Ramp from Day-30 Pilot Outcomes</div> <div class="chart-sub">94 contracts at month 3 compounding 18% MoM net of 4% churn</div> <div style="position:relative;height:320px"> <canvas id="chart-630f480e-7857-4773-9467-fac8b71fd034"></canvas> </div> <div class="source">Source · Modeled against Bessemer Cloud Index B2B SaaS benchmarks</div> <script type="application/json" data-chart="chart-630f480e-7857-4773-9467-fac8b71fd034">{"id":"chart-630f480e-7857-4773-9467-fac8b71fd034","datasets":[{"label":"Monthly Revenue ($)","data":[0,0,134608,152484,172734,195673,221658,251094,284440,322213,365003,413476]},{"label":"Cumulative Revenue ($)","data":[0,0,134608,287092,459826,655499,877157,1128251,1412691,1734904,2099907,2513383],"color":"var(--c2)"}],"labels":["M1","M2","M3","M4","M5","M6","M7","M8","M9","M10","M11","M12"],"height":320}</script> </figure> <script>
+(function(){
+  function readVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+  function init(){
+    if (!window.Chart) { setTimeout(init, 60); return; }
+    Chart.defaults.font.family = "'Inter', sans-serif";
+    Chart.defaults.color = readVar('--ink-soft');
+    Chart.defaults.borderColor = readVar('--rule');
+    document.querySelectorAll('script[data-chart]').forEach(function(s){
+      if (s.dataset.done) return; s.dataset.done = '1';
+      const cfg = JSON.parse(s.textContent);
+      const c = document.getElementById(cfg.id);
+      if (!c) return;
+      const colors = [readVar('--c1'), readVar('--c2'), readVar('--c3'), readVar('--c4'), readVar('--c5')];
+      const datasets = cfg.datasets.map(function(d, i){
+        const col = d.color || colors[i % colors.length];
+        return Object.assign({
+          borderColor: col,
+          backgroundColor: d.fill ? col + '22' : 'transparent',
+          tension: 0.32,
+          borderWidth: 2.2,
+          pointRadius: 0,
+          pointHoverRadius: 4,
+          fill: d.fill || false,
+        }, d, { color: undefined });
+      });
+      new Chart(c.getContext('2d'), {
+        type: 'line',
+        data: { labels: cfg.labels, datasets: datasets },
+        options: {
+          responsive: true, maintainAspectRatio: false,
+          interaction: { mode: 'index', intersect: false },
+          plugins: {
+            legend: { position: 'bottom', labels: { boxWidth: 10, boxHeight: 10, padding: 16, font: { size: 12 } } },
+            tooltip: {
+              backgroundColor: readVar('--paper-deep'),
+              titleColor: readVar('--ink'),
+              bodyColor: readVar('--ink-soft'),
+              borderColor: readVar('--rule'),
+              borderWidth: 1,
+              padding: 12,
+              titleFont: { family: "'Playfair Display', serif", size: 14 },
+              bodyFont: { family: "'JetBrains Mono', monospace", size: 12 },
+            }
+          },
+          scales: {
+            x: { grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 }, maxRotation: 0 } },
+            y: { grid: { color: readVar('--rule'), drawTicks: false }, ticks: { font: { family: "'JetBrains Mono', monospace", size: 11 } }, beginAtZero: false }
+          }
+        }
+      });
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init); else init();
+})();
+</script> <div class="callout"> <strong>Cumulative ARR signal.</strong> Month 12 cumulative revenue projects to roughly
+    $2513k against $290k of marketing spend — a 8.67× return inside one year, before
+    accounting for any expansion revenue from Enterprise upgrades or multi-year contracts.
+    The forecast is conservative because it assumes <em>no</em> referral coefficient, which
+    historically runs 0.4–0.7 in legal-tech.
+</div> <h2>Sales motion</h2> <div class="mermaid-wrap"> <div class="mermaid">flowchart LR
+  V[Visitor] --&gt;|free| FR[Free Report]
+  FR --&gt;|email follow-up&lt;br/&gt;D+1, D+3, D+7| T[Trial · 5 reports]
+  T --&gt;|D+14 review call| Q{Qualified?}
+  Q --&gt;|Yes| P[Pro $3.5k or&lt;br/&gt;Enterprise $9.5k/mo]
+  Q --&gt;|Soft| S[Standard $999/report&lt;br/&gt;self-serve]
+  Q --&gt;|No| N[Nurture · monthly digest]
+  N -.-&gt;|6-mo recycle| FR
+  style FR fill:#b8410e22,stroke:#b8410e
+  style P fill:#4a5d3a22,stroke:#4a5d3a
+  style S fill:#2d6e6b22,stroke:#2d6e6b
+</div> </div> <h2>Risk register</h2> <table> <thead> <tr><th>Risk</th><th>Likelihood</th><th>Impact</th><th>Mitigation</th></tr> </thead> <tbody> <tr><td>LinkedIn CPM inflation in legal-tech</td><td>Medium</td><td>Med</td><td>Cap LinkedIn at 33% allocation; pivot reserve to Meta retargeting</td></tr> <tr><td>Free→trial conversion below 23%</td><td>Medium</td><td>High</td><td>D14 re-forecast; cut bottom-decile creatives; tighten ICP filters</td></tr> <tr><td>3GPP corpus licensing dispute</td><td>Low</td><td>High</td><td>Public-spec only; FRAND-safe retrieval; audit trail per report</td></tr> <tr><td>Plaintiff bar adoption resistance</td><td>Medium</td><td>Med</td><td>Lead with funder + defense-counsel motions; pull plaintiffs after 2 reference wins</td></tr> </tbody> </table> <nav class="page-nav"> <a href="/05-channels"> <span class="step">← Chapter 05</span> Channel Strategy </a> <a href="/07-cta" style="text-align:right"> <span class="step">Chapter 07 →</span> The Action </a> </nav> </strong> </main> <script type="module">
+    if (window.mermaid) {
+      const isDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      window.mermaid.initialize({
+        startOnLoad: true,
+        theme: isDark ? 'dark' : 'default',
+        themeVariables: {
+          fontFamily: 'Inter, sans-serif',
+          primaryColor: isDark ? '#1a1410' : '#f5efe3',
+          primaryTextColor: isDark ? '#f0e6d2' : '#1a1612',
+          primaryBorderColor: isDark ? '#3a2f23' : '#c9bea7',
+          lineColor: isDark ? '#95876e' : '#6b5d4d',
+          mainBkg: isDark ? '#1a1410' : '#f5efe3',
+        },
+      });
+    }
+  </script> </body> </html>
